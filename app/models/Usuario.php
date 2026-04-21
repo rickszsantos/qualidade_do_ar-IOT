@@ -14,10 +14,10 @@ class Usuario {
         $this->nome = $nome;
 
         $this->email = $email;
-        //$Email = VerificarEmail(); colocar depois
+        
 
         $this->senha = $senha;
-        //$Senha = VerificarEmail(); colocar depois
+        
 
         $this->status = true;
 
@@ -30,23 +30,17 @@ class Usuario {
 //login==============================================
 
     //verificar se tem o email no banco
-    public static function buscarPorEmail(){
+    public static function buscarPorEmail($emailFornecido){
 
-
+        //verificar no sql
+        //$emailFonernecido = email está no banco
 
     }
 
     //autenticar senha
     public static function verificarSenha($senhaFornecida){
 
-        if($senhaFornecida == $this->senha){
-
-            //senha correta
-            return true
-
-        }
-
-        return false
+        return  $this->senha == $senhaFornecida;
 
     }
 

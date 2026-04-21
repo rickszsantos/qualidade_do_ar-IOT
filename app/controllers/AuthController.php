@@ -1,5 +1,6 @@
 <?php
-public class AuthControllers(){
+require_once "../app/models/Usuario.php";
+public class AuthController(){
 
 
 
@@ -23,12 +24,26 @@ public function login() {
 }
 
 
+public function cadastro() {
+
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+
+    //colocar a validação aqui
+    //validarEmail($email); colocar depois
+    //validarsenha($senha); colocar depois
+    $usuario = new Usuario($nome, $email, $senha);
+
+}
+
+
 /*
 
 --login();
+--cadastro();
 
 
-cadastro();
 logout();
 esqueciSenha();
 trocarSenha();
