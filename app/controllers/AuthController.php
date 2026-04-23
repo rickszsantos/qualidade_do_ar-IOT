@@ -1,6 +1,6 @@
 <?php
 require_once "../app/models/Usuario.php";
-public class AuthController(){
+class AuthController {
 
 
 
@@ -17,7 +17,7 @@ public function login() {
         //login sucesso, mandar para home
     }
     else{
-        //email e senha invalido
+        echo "senha ou email invalido";
     }
 
 
@@ -30,10 +30,16 @@ public function cadastro() {
     $email = $_POST['email'];
     $senha = $_POST['senha'];
 
-    //colocar a validação aqui
-    //validarEmail($email); colocar depois
+
+   
     //validarsenha($senha); colocar depois
-    $usuario = new Usuario($nome, $email, $senha);
+    if(validarEmail($email) && validarSenha($senha)){
+
+        $usuario = new Usuario($nome, $email, $senha);
+
+    }
+     
+    
 
 }
 

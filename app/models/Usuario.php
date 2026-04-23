@@ -44,15 +44,23 @@ class Usuario {
 
     }
 
-=====================================================
+//=====================================================
 
     //autenticar email, metodo
-    public static function validarEmail(){
+        public static function validarEmail($emailinformado){
 
-        //teste: email = contem "@"
+        //return str_contains($emailinformado, "@"); sem função
 
+        return filter_var($emailFonernecido, FILTER_VALIDADE_EMAIL);
+
+        }
+
+
+    //autenticar senha, metodo
+    public static function validarSenha($senhainformada){
+
+     
     }
-
 
 
 
