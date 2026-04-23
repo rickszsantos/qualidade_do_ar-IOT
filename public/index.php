@@ -2,12 +2,17 @@
 require_once "../app/controllers/AuthController.php";
 
 //rota login ===========================================================
-$acao = $_GET['acao'] ?? null;
+$acao = $_GET['acao'] ?? 'home';
 
 
 
 
-if($acao == "login"){
+if($acao == "home"){
+
+   require_once "../app/views/home.php";
+
+}
+elseif($acao == "login"){
 
     $controllers = new AuthController();
     $controllers->login();
@@ -27,60 +32,3 @@ elseif($acao == "cadastro"){
 
 
 
-
-
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Nome do projeto - Qualidade do ar </title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-
-<nav class="sidebar">
-    <div class="logo">
-        <img src="logo.png" alt="NOME PROJETO"> 
-        <br/>
-        <span>Projeto voltado para qualidade do ar </span>
-    </div>
-
-    <ul>
-        <li class="active">Dashboard</li>
-        <li>Histórico</li>
-        <li>Sensores</li>
-        <li>Configurações</li>
-    </ul>
-
-</nav>
-
-
-<main class="content">
-
-    <div class="card-co2">
-       <h3>Nível de CO2</h3>
-       <p>450 ppm</p>
-    </div>
-
-    <header class="top-header">
-        <h2>Índice de Qualidade do Ar</h2>
-        <div class="status-badge">Qualidade do Ar: <strong>Boa</strong>
-    </div>
-    </header>
-
-    <section class="chart-container">
-        <canvas id="meuGrafico"></canvas>
-    </section>
-
-    <section class="stats-grid">
-        <div class="card">Nível de CO2 <span>450 ppm</span></div>
-        <div class="card">Umidade <span>60%</span></div>
-        <div class="card alerts">Alertas Recentes <span>Nenhum alerta</span></div>
-    </section>
-
-    
-</main>
-</body>
-</html>
