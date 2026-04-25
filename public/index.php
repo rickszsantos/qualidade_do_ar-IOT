@@ -2,12 +2,17 @@
 require_once "../app/controllers/AuthController.php";
 
 //rota login ===========================================================
-$acao = $_GET['acao'] ?? 'home';
+$acao = $_GET['acao'] ?? null;
 
 
 
 
-if($acao == "home"){
+if($acao == null){
+
+   require_once "../app/views/login.php";
+
+}
+elseif($acao == "home"){
 
    require_once "../app/views/home.php";
 
@@ -24,6 +29,7 @@ elseif($acao == "cadastro"){
     $controllers->cadastro();
 
 }
+
 
 
 
