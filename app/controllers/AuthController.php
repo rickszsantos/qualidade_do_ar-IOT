@@ -33,11 +33,11 @@ public function cadastro() {
 
    
     //validarsenha($senha); colocar depois
-    if(validarEmail($email) && validarSenha($senha)){
+   // if(validarEmail($email) && validarSenha($senha)){
 
-        $usuario = new Usuario($nome, $email, $senha);
+     //   $usuario = new Usuario($nome, $email, $senha);
 
-    }
+    //}
      
     
 
