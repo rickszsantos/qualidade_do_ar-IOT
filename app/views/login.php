@@ -9,7 +9,7 @@
 
     body {
       min-height: 100vh;
-      background: #EFF4FB;
+      background: #0c3c85;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -66,7 +66,7 @@
       margin-top: 1rem;
     }
 
-    .brand-name span { color: #64B5F6; }
+    .brand-name span { color: #e2e7eb; }
 
     .brand-sub {
       font-size: 13px;
@@ -110,7 +110,7 @@
 
     .right {
       flex: 1.1;
-      background: #ffffff;
+      background: #dddfe9;
       padding: 3rem 2.5rem;
       display: flex;
       flex-direction: column;
@@ -126,7 +126,7 @@
     }
 
     .form-sub {
-      font-size: 13px;
+      font-size: 16px;
       color: #8a96a8;
       text-align: center;
       margin-bottom: 2rem;
@@ -163,7 +163,7 @@
       font-size: 14px;
       color: #111827;
       outline: none;
-      background: #fff;
+      background: #eeeff4;
       transition: border-color 0.2s, box-shadow 0.2s;
     }
 
@@ -219,16 +219,17 @@
     .divider {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       margin-bottom: 1.25rem;
     }
 
     .div-line { flex: 1; height: 1px; background: #E5E7EB; }
     .div-text { font-size: 12px; color: #9CA3AF; }
-
+     
+    /* RECUPERAR  SENHA */
     .register-line {
       text-align: center;
-      font-size: 13px;
+      font-size: 14px;
       color: #6B7280;
     }
 
